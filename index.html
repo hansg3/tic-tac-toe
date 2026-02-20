@@ -12,64 +12,78 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      background: #1a1a2e;
-      font-family: sans-serif;
-      color: #eee;
+      background: #f5f5f0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #111;
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      letter-spacing: 2px;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 3rem;
     }
 
     #status {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
-      height: 1.5rem;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 2rem;
+      height: 1rem;
     }
 
     #board {
       display: grid;
       grid-template-columns: repeat(3, 100px);
       grid-template-rows: repeat(3, 100px);
-      gap: 8px;
+      gap: 1px;
+      background: #ccc;
+      border: 1px solid #ccc;
     }
 
     .cell {
-      background: #16213e;
-      border-radius: 8px;
+      background: #f5f5f0;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.5rem;
-      font-weight: bold;
+      font-size: 1.5rem;
+      font-weight: 300;
       cursor: pointer;
-      transition: background 0.15s;
+      transition: background 0.1s;
       user-select: none;
+      color: #111;
     }
 
     .cell:hover:not(.taken) {
-      background: #0f3460;
+      background: #ebebе6;
     }
 
-    .cell.x { color: #e94560; }
-    .cell.o { color: #4fc3f7; }
-    .cell.win { background: #0f3460; }
+    .cell.x { color: #111; }
+    .cell.o { color: #111; }
+    .cell.win { background: #e8e8e3; }
 
     #restart {
-      margin-top: 1.5rem;
-      padding: 0.6rem 1.8rem;
-      font-size: 1rem;
-      background: #e94560;
-      color: white;
-      border: none;
-      border-radius: 6px;
+      margin-top: 2.5rem;
+      padding: 0.5rem 1.5rem;
+      font-family: inherit;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: transparent;
+      color: #111;
+      border: 1px solid #ccc;
       cursor: pointer;
-      transition: background 0.15s;
+      transition: border-color 0.1s, color 0.1s;
     }
 
-    #restart:hover { background: #c73652; }
+    #restart:hover {
+      border-color: #111;
+    }
   </style>
 </head>
 <body>
